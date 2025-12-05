@@ -4,7 +4,7 @@ import wikipediaapi
 import sys
 import os
 
-def get_theme_mistral(page_name, lang, themes, wiki_objects, clean_page_title,theme_cache, Client):
+def get_theme_mistral(page_name, lang, themes, wiki_objects, clean_page_title,theme_cache, client):
     key = f"{lang}_{page_name}"
     if key in theme_cache:
         return theme_cache[key]
@@ -74,3 +74,4 @@ Thème :
     theme_cache[key] = theme
 
     return theme
+
