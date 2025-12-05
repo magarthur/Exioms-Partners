@@ -1,3 +1,5 @@
+import pandas as pd
+
 def human_views(train, date_cols):
 	df_clean = train.drop_duplicates(subset=['page_name', 'lang', 'agent']) # On s'assure ici qu'il n'y a pas de doublon
 	df_clean = df_clean.set_index(['page_name', 'lang'])	# On transforme l'index en étiquette, permet d'eviter des erreurs de décalage
@@ -13,6 +15,7 @@ def human_views(train, date_cols):
 	train_human_views = pd.concat([df_meta, df_human], axis=1).reset_index()	#on concatène le tout puis on redéfinit un index.
 
 	return train_human_views
+
 
 
 
