@@ -9,7 +9,8 @@ def human_views(train, date_cols):
 
 	df_human = df_all.sub(df_spider, fill_value=0).reset_index() # on soustrait df_spider à df_all
 
-	return train_human_views
+	return df_human
+
 
 
 
